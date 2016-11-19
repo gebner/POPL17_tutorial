@@ -10,15 +10,33 @@ Our goals are then to cover the language as well as:
 - automation
  
 # First Hour
-High level intro, use IMP as running example, Zach ideas would be good 
+- high level introduction
+ * Lean's core theory
+ * Goals, design, etc 
+ * We can repurpose Leo's [recent material](https://github.com/leanprover/presentations/tree/master/20161024_ICTAC)
+- Present an IMP-like language fully verified, as an example, we can walk people through
+  some basic proofs, Zach's input here would be good esp. with Street Fighting
 
 # Second and Third Hour
-- debugger 
+- debugger
+ * VM introspection API
 - tactic framework 
+ * defining tactics
+ * using tactics
+ * internal APIS
+ * quasiquoting
+ * meta programming
 - profiler
+ * show profiler? 
 - parallel code generator
-- customize simplifier
+ * Gabriel's parallel/incremental .olean compiler (if ready)
+ * flow change module B which depends on module A, 
+   auto recompile and report errors for B & A, 
+   works on partial modules even
+- customize simplifier, other automation hooks
+ * fill in here
 - resolution prover as example of program & tactic? 
+ * Use Gabriel's [resolution prover](https://github.com/leanprover/library_dev/tree/master/automation/super)
 
 # Icing on the cake
 - visual debugger mode
@@ -40,5 +58,6 @@ High level intro, use IMP as running example, Zach ideas would be good
 # Native Complier TODO-list
 - native closures
 - select optimizations (we need a benchmark  or set of benchmarks, consensus here would be good)
-- testing
+ * probably sTCE (self tail call elimination, mutual requires a lower representation) 
+- heavy testing
 - shared module compilation (a couple remanining pieces)
